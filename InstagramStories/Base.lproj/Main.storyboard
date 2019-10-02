@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstagramStories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="6EY-Ia-hTh">
+                                <rect key="frame" x="-43" y="144" width="500" height="331"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atY-7m-30m">
+                                <rect key="frame" x="119.5" y="505" width="175" height="30"/>
+                                <state key="normal" title="Share image to instagram"/>
+                                <connections>
+                                    <action selector="shareToInstaStories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idS-o9-HbI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0g-8b-GAc">
+                                <rect key="frame" x="118.5" y="84" width="177" height="30"/>
+                                <state key="normal" title="Save image to camera roll"/>
+                                <connections>
+                                    <action selector="didTapSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXS-qm-U6w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="atY-7m-30m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nz-ut-Gpi"/>
+                            <constraint firstItem="6EY-Ia-hTh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Cj5-QM-R2O"/>
+                            <constraint firstItem="D0g-8b-GAc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NgD-co-ZD6"/>
+                            <constraint firstItem="atY-7m-30m" firstAttribute="top" secondItem="6EY-Ia-hTh" secondAttribute="bottom" constant="30" id="XXV-oj-Xrg"/>
+                            <constraint firstItem="6EY-Ia-hTh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hBv-nE-EDg"/>
+                            <constraint firstItem="6EY-Ia-hTh" firstAttribute="top" secondItem="D0g-8b-GAc" secondAttribute="bottom" constant="30" id="tLF-ZL-scu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sharingImageView" destination="6EY-Ia-hTh" id="v2F-0B-byQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rose" width="500" height="331"/>
+    </resources>
+</document>
